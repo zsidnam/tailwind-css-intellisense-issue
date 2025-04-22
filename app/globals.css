@@ -2,8 +2,8 @@
 
 :root {
   --one: #ff0000;
-  --color-two: #ff0000;
-  --color-three: 255 00 00;
+  --two: 255 00 00;
+  --color-three: #ff0000;
   --color-four: 255 00 00;
 }
 
@@ -11,8 +11,8 @@
   /* Not self-referencing, not using rgb() ✅ */
   --color-one: var(--one);
 
-  /* Self-referencing, Not using rgb() ✅ */
-  --color-two: var(--color-two);
+  /* Not self-referencing, using rgb() ✅ */
+  --color-two: rgb(var(--two));
 
   /* Self-referencing, not using rgb() ✅ */
   --color-three: var(--color-three);
